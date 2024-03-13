@@ -1,4 +1,4 @@
-package com.ankit.dsa.master.BitMagic;
+package com.ankit.dsa.master.bitMagic;
 
 public class BitMagicDsaMain {
 

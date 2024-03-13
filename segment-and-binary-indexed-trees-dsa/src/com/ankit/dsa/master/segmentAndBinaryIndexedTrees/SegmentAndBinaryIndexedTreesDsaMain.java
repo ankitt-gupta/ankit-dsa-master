@@ -1,4 +1,4 @@
-package com.ankit.dsa.master.SegmentAndBinaryIndexedTrees;
+package com.ankit.dsa.master.segmentAndBinaryIndexedTrees;
 
 public class SegmentAndBinaryIndexedTreesDsaMain {
 

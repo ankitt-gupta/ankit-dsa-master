@@ -1,4 +1,4 @@
-package com.ankit.dsa.master.DisjointSet;
+package com.ankit.dsa.master.disjointSet;
 
 public class DisjointSetDsaMain {
 
