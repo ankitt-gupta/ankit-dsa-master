@@ -1,4 +1,4 @@
-package com.ankit.dsa.master.dynamic-programing;
+package com.ankit.dsa.master.dynamicPrograming;
 
 public class DynamicProgramingDsaMain {
 
