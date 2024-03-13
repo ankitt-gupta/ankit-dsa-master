@@ -1,4 +1,4 @@
-package com.ankit.dsa.master.binary-search-tree;
+package com.ankit.dsa.master.BinarySearchTree;
 
 public class BinarySearchTreeDsaMain {
 
