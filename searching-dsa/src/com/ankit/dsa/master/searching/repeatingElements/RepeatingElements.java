@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.ankit.dsa.master.searching.repeatingElements;
 
 /**
