@@ -36,14 +36,14 @@ Start From here:
 
 1. Largest Element in an Array:
 
-	//Given:
-	int[] a1 = { 10, 5, 20, 10 };
-	//Expected: 20
+		//Given:
+		int[] a1 = { 10, 5, 20, 10 };
+		//Expected: 20
 
 2. Second Largest Element in an Array:
 
-	//Given:
-	int[] a2 = { 10, 5, 20, 10 };
-	// Expected: 10
+		//Given:
+		int[] a2 = { 10, 5, 20, 10 };
+		// Expected: 10
 
 3. 
