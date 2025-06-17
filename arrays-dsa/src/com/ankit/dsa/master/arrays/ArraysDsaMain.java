@@ -1,7 +1,5 @@
 package com.ankit.dsa.master.arrays;
 
-import java.util.Iterator;
-
 public class ArraysDsaMain {
 
 	public static void main(String[] args) {
@@ -24,7 +22,7 @@ public class ArraysDsaMain {
 //2. Second Largest Element in an Array:
 
 		// Given:
-		int[] a2 = { 10, 5, 20, 10 };
+		int[] a2 = { 15, 5, 20, 12, 14, 20, 8 };
 		// Expected: 10
 
 		int largestElement2 = -1;
@@ -34,6 +32,10 @@ public class ArraysDsaMain {
 			if (largestElement2 < a2[i]) {
 				SecondLargestrElement = largestElement2;
 				largestElement2 = a2[i];
+			} else if (a2[i] != largestElement2) {
+				if (a2[i] > SecondLargestrElement) {
+					SecondLargestrElement = a2[i];
+				}
 			}
 		}
 

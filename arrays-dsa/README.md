@@ -43,7 +43,7 @@ Start From here:
 2. Second Largest Element in an Array:
 
 		//Given:
-		int[] a2 = { 10, 5, 20, 10 };
+		int[] a2 = { 15, 5, 20, 12, 14, 20, 8 };
 		// Expected: 10
 
 3. 
