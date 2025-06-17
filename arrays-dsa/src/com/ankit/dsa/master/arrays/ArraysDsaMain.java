@@ -12,6 +12,7 @@ public class ArraysDsaMain {
 
 	public static void main(String[] args) {
 		System.out.println("Hello! Arrays in DSA");
+		int size = 0;
 
 //1. Largest Element in an Array:
 
@@ -78,10 +79,30 @@ public class ArraysDsaMain {
 		for (int i = 0; i < a5Length / 2; i++) {
 			swapInt(a5, i, a5Length - 1 - i);
 		}
+		size = a5.length;
+		outPutIntArray(a5, size, "Reverse An Array: ");
 
-		outPutIntArray(a5, "Reverse An Array: ");
+//5. Remove duplicates from sorted array
 
-	}
+		// Given:
+		int[] a6 = { 10, 20, 20, 30, 30, 30, 40 };
+		// Expected: [10,20,30]
+
+		int j = 0;
+		for (int i = 1; i < a6.length; i++) {
+			if( i >= 0 && j < a6.length - 1 
+				&& a6[i] != a6[j]) {
+				j++;
+				swapInt(a6, i, j);
+			}
+		}
+		size = j+1;
+		outPutIntArray(a6, size, "Removed Duplicates: ");
+
+//6. 
+		
+  }
+
 
 	/**
 	 * The method for output Intger Array.
@@ -89,12 +110,13 @@ public class ArraysDsaMain {
 	 * @param a       : Array we need to output
 	 * @param message : Output Message
 	 */
-	private static void outPutIntArray(int[] a, String message) {
+	private static void outPutIntArray(int[] a, int size, String message) {
 		// Iterate an Array and give output
 		System.out.println(message);
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < size; i++) {
 			System.out.print(a[i]);
 		}
+		System.out.println("");
 	}
 
 	/**

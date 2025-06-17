@@ -61,7 +61,13 @@ Start From here:
 		int[] a5 = { 1, 2, 3, 4, 5 };
 		// Expected: [5,4,3,2,1]
 
-5. 
+5. Remove duplicates from sorted array
+
+		//Given:
+		int[] a6 = {10,20,20,30,30,30};
+		//Expected: [10,20,30]
+
+6. 
 
 
 
