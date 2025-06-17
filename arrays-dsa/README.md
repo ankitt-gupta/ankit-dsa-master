@@ -46,4 +46,32 @@ Start From here:
 		int[] a2 = { 15, 5, 20, 12, 14, 20, 8 };
 		// Expected: 10
 
-3. 
+3. Check if array is sorted or not (Ascending)
+
+		// Given:
+		int[] a3 = { 1,2,3,4,5,6,7,8,9 };
+		// Expected: true
+		//Given:
+		int[] a4 = { 1,8,3,4,5,6,7,8,9 };
+		// Expected: false
+
+4. Reverse an Array:
+
+		// Given:
+		int[] a5 = { 1, 2, 3, 4, 5 };
+		// Expected: [5,4,3,2,1]
+
+5. Remove duplicates from sorted array
+
+		//Given:
+		int[] a6 = {10,20,20,30,30,30};
+		//Expected: [10,20,30]
+
+6. 
+
+
+
+
+
+
+ 
