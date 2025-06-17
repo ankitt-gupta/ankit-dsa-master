@@ -55,6 +55,13 @@ Start From here:
 		int[] a4 = { 1,8,3,4,5,6,7,8,9 };
 		// Expected: false
 
+4. Reverse an Array:
+
+		// Given:
+		int[] a5 = { 1, 2, 3, 4, 5 };
+		// Expected: [5,4,3,2,1]
+
+5. 
 
 
 
