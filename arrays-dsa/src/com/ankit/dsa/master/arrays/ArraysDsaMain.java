@@ -1,5 +1,7 @@
 package com.ankit.dsa.master.arrays;
 
+import java.util.Iterator;
+
 public class ArraysDsaMain {
 
 	public static void main(String[] args) {
@@ -40,7 +42,28 @@ public class ArraysDsaMain {
 		}
 
 		System.out.println("SecondLargestrElement: " + SecondLargestrElement);
+		
+//3. Check if array is sorted or not (Ascending):
 
+		// Given:
+		int[] a3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		// Expected: true
+		// Given:
+		int[] a4 = { 1, 8, 3, 4, 5, 6, 7, 8, 9 };
+		// Expected: false
+
+		boolean res = false;
+		for (int i = 1; i < a4.length; i++) {
+			if (a4[i - 1] < a4[i]) {
+				res = true;
+			} else {
+				res = false;
+				break;
+			}
+		}
+		System.out.println("Sorted? : " + res);
+
+//4. 
 	}
 
 }
