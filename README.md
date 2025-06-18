@@ -30,3 +30,8 @@ Start From here:
 21. Trie
 22. Segment and Binary Indexed  Trees
 23. Disjoint Set
+
+https://github.com/user-attachments/assets/a2f90cf7-9420-442a-a0a5-84596d8659da
+https://github.com/ankitt-gupta/ankit-dsa-master/tree/develop/arrays-dsa/README.md
+
+{{< include "[sections/installation.md](https://github.com/ankitt-gupta/ankit-dsa-master/tree/develop/arrays-dsa/README.md)" >}}
