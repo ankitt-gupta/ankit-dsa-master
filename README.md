@@ -33,5 +33,5 @@ Start From here:
 
 
 --
-{{< include https://github.com/ankitt-gupta/ankit-dsa-master/tree/develop/arrays-dsa/README.md >}}
+{{< include "arrays-dsa/README.md" >}}
 ----
