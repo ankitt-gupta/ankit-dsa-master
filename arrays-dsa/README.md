@@ -32,7 +32,7 @@ Start From here:
 	23. Disjoint Set
 
 
-###Arrays
+### Arrays
 
 1. Largest Element in an Array:
 
