@@ -32,7 +32,7 @@ Start From here:
 	23. Disjoint Set
 
 
-###Arrays
+### Arrays
 
 1. Largest Element in an Array:
 
@@ -67,9 +67,13 @@ Start From here:
 		int[] a6 = {10,20,20,30,30,30};
 		//Expected: [10,20,30]
 
-6. 
+6. Move zeros to the end
 
+		//Given
+		int[] a7 = {1, 0, 0, 2, 3, 5, 0, 9, 0};		
+		//Expected: [1,2,3,5,9,0,0,0,0]
 
+7. 
 
 
 

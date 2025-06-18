@@ -90,33 +90,53 @@ public class ArraysDsaMain {
 
 		int j = 0;
 		for (int i = 1; i < a6.length; i++) {
-			if( i >= 0 && j < a6.length - 1 
-				&& a6[i] != a6[j]) {
+			if (i >= 0 && j < a6.length - 1 && a6[i] != a6[j]) {
 				j++;
 				swapInt(a6, i, j);
 			}
 		}
-		size = j+1;
+		size = j + 1;
 		outPutIntArray(a6, size, "Removed Duplicates: ");
 
-//6. 
+//6. Move zeros to the end
 		
-  }
+		//Given     0  1  2  3  4  5  6  7  8
+		int[] a7 = {1, 0, 0, 2, 3, 5, 0, 9, 0};		
+		//Expected: [1,2,3,5,9,0,0,0,0]
+	
+		int swapingIndex = 0;
+		for (int currentIndex = 0; currentIndex < a7.length; currentIndex++) {
+			if(a7[currentIndex] != 0) {
+				swapInt(a7, currentIndex, swapingIndex);    
+			    swapingIndex++;                             
+			}
+		}
+		outPutIntArray(a7, a7.length, "Move Zeros to the End :");
+		
+//		Dry Run:
+//      1, 2, 0, 0, 3, 5, 0, 9, 0  //0,0 -> swap  1,1 -> skip  2,1 -> skip  3,1 -> swap(3,1)   
+//		1, 2, 3, 0, 0, 5, 0, 9, 0  //4,2 -> swap(4,2)  
+//		1, 2, 3, 5, 0, 0, 0, 9, 0  //5,3 -> swap(5,3) 5,4 -> skip  
+//      1, 2, 3, 5, 9, 0, 0, 0, 0  //6,4 -> swap(6, 4) skip for 7,8 as we will not find any non-zero value
+
+		
+		
+	}
 
 
 	/**
-	 * The method for output Intger Array.
+	 * The method for output Integer Array.
 	 * 
 	 * @param a       : Array we need to output
 	 * @param message : Output Message
 	 */
 	private static void outPutIntArray(int[] a, int size, String message) {
 		// Iterate an Array and give output
-		System.out.println(message);
+		System.out.print(message);
 		for (int i = 0; i < size; i++) {
-			System.out.print(a[i]);
+			System.out.print(a[i] + ", ");
 		}
-		System.out.println("");
+		System.out.println(" ");
 	}
 
 	/**
