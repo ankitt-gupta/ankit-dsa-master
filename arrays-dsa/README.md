@@ -69,11 +69,18 @@ Start From here:
 
 6. Move zeros to the end
 
-		//Given
-		int[] a7 = {1, 0, 0, 2, 3, 5, 0, 9, 0};		
-		//Expected: [1,2,3,5,9,0,0,0,0]
+	   //Given
+	   int[] a7 = {1, 0, 0, 2, 3, 5, 0,  9, 0};		
+	   //Expected: [1,2,3,5,9,0,0,0,0]
 
-7. 
+7. Left rotate array by d places
+
+		// Given:
+		int[] a8 = { 1, 2, 3, 4, 5 };
+		int d = 2;
+		// Expected: [3,4,5,2,1]
+
+8. 
 
 
 
