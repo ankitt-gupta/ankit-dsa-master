@@ -184,6 +184,33 @@ public class ArraysDsaMain {
 
 		System.out.println(
 				"Max Difference:  " + a10[maxIndex] + " - " + a10[minIndex] + ": " + (a10[maxIndex] - a10[minIndex]));
+
+//10. Find the Frequencies in a Sorted Array
+
+		// Given:
+		int[] a11 = { 1, 1, 1, 2, 3, 3, 5, 5, 8, 8, 8, 9, 9, 10 };
+		// Expected: Output: Frequency of 1 is: 3
+		// Frequency of 2 is: 1
+		// Frequency of 3 is: 2
+		// Frequency of 5 is: 2
+		// Frequency of 8 is: 3
+		// Frequency of 9 is: 2
+		// Frequency of 10 is: 1
+
+		int count = 1;
+
+		for (int i = 1; i < a11.length; i++) {
+			if (a11[i - 1] == a11[i]) {
+				count++;
+			} else {
+				System.out.println("Frequency of " + a11[i - 1] + " is: " + count);
+				count = 1;
+				if (i == a11.length - 1) {
+					System.out.println("Frequency of " + a11[i] + " is: " + count);
+				}
+			}
+		}
+
 	}
 
 	/**
