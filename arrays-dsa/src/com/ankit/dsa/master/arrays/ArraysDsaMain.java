@@ -119,8 +119,42 @@ public class ArraysDsaMain {
 //		1, 2, 3, 5, 0, 0, 0, 9, 0  //5,3 -> swap(5,3) 5,4 -> skip  
 //      1, 2, 3, 5, 9, 0, 0, 0, 0  //6,4 -> swap(6, 4) skip for 7,8 as we will not find any non-zero value
 
-		
-		
+//7. Left rotate array by d places
+
+		// Given:
+		int[] a8 = { 1, 2, 3, 4, 5 };
+		int d = 2;
+		// Expected: [3,4,5,2,1]
+
+		reverse(a8, 0, d);
+		reverse(a8, d, a8.length);
+		reverse(a8, 0, a8.length);
+
+		outPutIntArray(a8, a8.length, "Left rotate array by d places :  ");
+
+		//Dry Run
+		// Given: [1,2,3,4,5]
+		// [2,1,3,4,5] (first reverse d places)
+		// [2,1,5,4,3] (second reverse n-d places)
+		// [3,4,5,1,2] (third reverse n places)
+
+//8. 
+
+	}
+
+	/**
+	 * The Method Reverse array by d places.
+	 * 
+	 * @param a8   array to be reversed
+	 * @param from range to start with
+	 * @param to   range to end with
+	 */
+	private static void reverse(int[] a8, int from, int to) {
+		while (from < to - 1) {
+			swapInt(a8, from, to - 1);
+			from++;
+			to--;
+		}
 	}
 
 
