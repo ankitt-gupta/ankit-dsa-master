@@ -80,8 +80,15 @@ Start From here:
 		int d = 2;
 		// Expected: [3,4,5,2,1]
 
-8. 
+8. Leaders in an Array problem
 
+  		What is a Leader? 
+		An element is a leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
+		
+		Given Input: arr[] = {16, 17, 4, 3, 5, 2}, 
+		Expected Output: 17, 5, 2
+
+9. 
 
 
 
