@@ -138,8 +138,21 @@ public class ArraysDsaMain {
 		// [2,1,5,4,3] (second reverse n-d places)
 		// [3,4,5,1,2] (third reverse n places)
 
-//8. 
+//8.  Leaders in an Array problem
+		// Given Input:
+		int[] a9 = { 16, 17, 4, 3, 5, 2 };
+		// Expected Output: 17, 5, 2
 
+		int leader = a9[a9.length - 1];
+		System.out.print("Leaders in this array: " + leader);
+		for (int i = a9.length - 1; i > 0; i--) {
+			if (a9[i] > leader) {
+				System.out.print(", " + a9[i]);
+				leader = a9[i];
+			}
+		}
+
+		
 	}
 
 	/**
