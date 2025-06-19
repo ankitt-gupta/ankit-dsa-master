@@ -116,7 +116,8 @@ Start From here:
 		               Frequency of 6 is: 2
 		               Frequency of 7 is: 3
 		               Frequency of 11 is: 1
-		               
+
+
 11.  
 
  
