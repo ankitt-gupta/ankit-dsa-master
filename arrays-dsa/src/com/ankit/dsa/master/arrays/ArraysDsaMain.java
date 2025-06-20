@@ -215,17 +215,69 @@ public class ArraysDsaMain {
 
 //		The cost of a stock on each day is given in an array. Find the maximum profit that you can make by buying and selling on those days. 
 //		If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
-		//Given: 
-		int[] a12 = {100, 180, 260, 310, 40, 535, 695};
-		
+		// Given:
+		int[] a12 = { 100, 180, 260, 310, 40, 535, 695 };
+
 		int maxProfit = 0;
 		for (int i = 1; i < a12.length; i++) {
-			if(a12[i] > a12[i - 1]) {
+			if (a12[i] > a12[i - 1]) {
 				maxProfit = maxProfit + (a12[i] - a12[i - 1]);
 			}
 		}
-		
+
 		System.out.println("Stock Buy and Sell Max Profit : " + maxProfit);
+
+//12. Trapping Rain Water
+		// Given an array of N non-negative integers arr[ ] representing an elevation
+		// map where the width of each bar is 1,
+		// compute how much water it is able to trap after rain.
+		// Note: The array elements represent the height of the bars.
+		// Input: arr[] = {1, 0, 3, 0, 2, 0, 4, 0, 1}
+		// Output: 9
+
+		int[] a13 = { 1, 0, 3, 0, 2, 0, 4, 0, 1 };
+
+		// If the array has less than 3 elements, no water can be trapped.
+		// (A bar needs walls on both sides to trap water)
+		if (a13.length <= 2) {
+			System.out.println("The total trapped water : " + 0);
+		}
+
+		int ress = 0; // Initialize total trapped water
+
+		// Declare and initialize lMax and rMax arrays
+		// These will store the maximum height encountered from the left and right,
+		// respectively.
+		int[] lMax = new int[a13.length];
+		int[] rMax = new int[a13.length];
+
+		// Fill lMax array:
+		// lMax[i] stores the maximum height from index 0 to i (inclusive).
+		lMax[0] = a13[0]; // The first element's left max is itself
+		for (int i = 1; i < a13.length; i++) {
+			lMax[i] = Math.max(a13[i], lMax[i - 1]);
+		}
+
+		// Fill rMax array:
+		// rMax[i] stores the maximum height from index i to n-1 (inclusive).
+		rMax[a13.length - 1] = a13[a13.length - 1]; // The last element's right max is itself
+		for (int i = a13.length - 2; i >= 0; i--) { // Loop from second last element down to first
+			rMax[i] = Math.max(a13[i], rMax[i + 1]);
+		}
+
+		// Calculate total trapped water:
+		// Iterate from the second element (index 1) up to the second last element
+		// (index n-2).
+		// The first and last elements cannot trap water.
+		for (int i = 1; i < a13.length - 1; i++) {
+			// The water level above arr[i] is determined by the minimum of the
+			// max height to its left and the max height to its right.
+			// Subtract arr[i] itself to get the trapped water *above* this bar.
+			ress = ress + (Math.min(lMax[i], rMax[i]) - a13[i]);
+		}
+
+		System.out.println("The total trapped water : " + ress);
+
 	}
 
 	/**
