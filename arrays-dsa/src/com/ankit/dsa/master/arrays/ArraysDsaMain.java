@@ -278,6 +278,26 @@ public class ArraysDsaMain {
 
 		System.out.println("The total trapped water : " + ress);
 
+//13. Max consecutive 1s
+
+		//Given a binary array, find the count of the maximum number of consecutive 1's present in the array.
+		int[] a14 = {1,1,1,0,0,1,1};
+		//Expected: 3   {3>2}
+		int cur = 0;
+		int ones = 0;
+		for (int i = 0; i < a14.length; i++) {
+			if(a14[i] == 0) {
+				cur = 0;
+			} else {
+				cur++;
+			ones =	Math.max(ones,cur);
+			}
+		}
+
+		System.out.println("Max 1s : " + ones);
+		
+		
+		
 	}
 
 	/**
