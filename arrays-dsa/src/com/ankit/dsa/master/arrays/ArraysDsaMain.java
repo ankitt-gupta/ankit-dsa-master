@@ -99,20 +99,20 @@ public class ArraysDsaMain {
 		outPutIntArray(a6, size, "Removed Duplicates: ");
 
 //6. Move zeros to the end
-		
-		//Given     0  1  2  3  4  5  6  7  8
-		int[] a7 = {1, 0, 0, 2, 3, 5, 0, 9, 0};		
-		//Expected: [1,2,3,5,9,0,0,0,0]
-	
+
+		// Given 0 1 2 3 4 5 6 7 8
+		int[] a7 = { 1, 0, 0, 2, 3, 5, 0, 9, 0 };
+		// Expected: [1,2,3,5,9,0,0,0,0]
+
 		int swapingIndex = 0;
 		for (int currentIndex = 0; currentIndex < a7.length; currentIndex++) {
-			if(a7[currentIndex] != 0) {
-				swapInt(a7, currentIndex, swapingIndex);    
-			    swapingIndex++;                             
+			if (a7[currentIndex] != 0) {
+				swapInt(a7, currentIndex, swapingIndex);
+				swapingIndex++;
 			}
 		}
 		outPutIntArray(a7, a7.length, "Move Zeros to the End :");
-		
+
 //		Dry Run:
 //      1, 2, 0, 0, 3, 5, 0, 9, 0  //0,0 -> swap  1,1 -> skip  2,1 -> skip  3,1 -> swap(3,1)   
 //		1, 2, 3, 0, 0, 5, 0, 9, 0  //4,2 -> swap(4,2)  
@@ -132,7 +132,7 @@ public class ArraysDsaMain {
 
 		outPutIntArray(a8, a8.length, "Left rotate array by d places :  ");
 
-		//Dry Run
+		// Dry Run
 		// Given: [1,2,3,4,5]
 		// [2,1,3,4,5] (first reverse d places)
 		// [2,1,5,4,3] (second reverse n-d places)
@@ -151,8 +151,81 @@ public class ArraysDsaMain {
 				leader = a9[i];
 			}
 		}
+		System.out.println(" ");
 
+//9. Maximum Difference Problem with Order
+		// Given an array arr[] of integers,
+		// find out the maximum difference between any two elements such that the larger
+		// element appears after the smaller number.
+
+		// Given Input :
+		int[] a10 = { 2, 3, 10, 6, 4, 8, 1 };
+		// Expected Output : 8
+
+		// maxNum=10 from right to left
+		// minNum=2 from left to right [such that the larger element appears after the
+		// smaller number]
+		// output both difference
+
+		int minIndex = 0;
+		int maxIndex = 0;
+
+		for (int i = a10.length - 1; i >= 0; i--) {
+			if (a10[i] > a10[maxIndex]) {
+				maxIndex = i;
+			}
+		}
+
+		for (int i = 0; i < a10.length; i++) {
+			if ((a10[i] < a10[minIndex]) && i < maxIndex) {
+				minIndex = i;
+			}
+		}
+
+		System.out.println(
+				"Max Difference:  " + a10[maxIndex] + " - " + a10[minIndex] + ": " + (a10[maxIndex] - a10[minIndex]));
+
+//10. Find the Frequencies in a Sorted Array
+
+		// Given:
+		int[] a11 = { 1, 1, 1, 2, 3, 3, 5, 5, 8, 8, 8, 9, 9, 10 };
+		// Expected: Output: Frequency of 1 is: 3
+		// Frequency of 2 is: 1
+		// Frequency of 3 is: 2
+		// Frequency of 5 is: 2
+		// Frequency of 8 is: 3
+		// Frequency of 9 is: 2
+		// Frequency of 10 is: 1
+
+		int count = 1;
+
+		for (int i = 1; i < a11.length; i++) {
+			if (a11[i - 1] == a11[i]) {
+				count++;
+			} else {
+				System.out.println("Frequency of " + a11[i - 1] + " is: " + count);
+				count = 1;
+				if (i == a11.length - 1) {
+					System.out.println("Frequency of " + a11[i] + " is: " + count);
+				}
+			}
+		}
+
+//11. Stock Buy and Sell Problem
+
+//		The cost of a stock on each day is given in an array. Find the maximum profit that you can make by buying and selling on those days. 
+//		If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
+		//Given: 
+		int[] a12 = {100, 180, 260, 310, 40, 535, 695};
 		
+		int maxProfit = 0;
+		for (int i = 1; i < a12.length; i++) {
+			if(a12[i] > a12[i - 1]) {
+				maxProfit = maxProfit + (a12[i] - a12[i - 1]);
+			}
+		}
+		
+		System.out.println("Stock Buy and Sell Max Profit : " + maxProfit);
 	}
 
 	/**
@@ -169,7 +242,6 @@ public class ArraysDsaMain {
 			to--;
 		}
 	}
-
 
 	/**
 	 * The method for output Integer Array.

@@ -88,8 +88,51 @@ Start From here:
 		Given Input: arr[] = {16, 17, 4, 3, 5, 2}, 
 		Expected Output: 17, 5, 2
 
-9. 
+9. Maximum Difference Problem with Order
+
+		Given an array arr[] of integers, find out the maximum difference between any two elements such that the larger element appears after the smaller number. 
+		
+		Input : arr = {2, 3, 10, 6, 4, 8, 1}
+		Output : 8
+		Explanation : The maximum difference is between 10 and 2.
+		
+		Input : arr = {7, 9, 5, 6, 3, 2}
+		Output : 2
+		Explanation : The maximum difference is between 9 and 7.
+
+10.  Find the Frequencies in a Sorted Array
+
+			Given a sorted array, arr[] consisting of N integers, the task is to find the frequencies of each array element.
+			Input: arr[] = {1, 1, 1, 2, 3, 3, 5, 5, 8, 8, 8, 9, 9, 10} 
+			Output:       Frequency of 1 is: 3
+			              Frequency of 2 is: 1
+			              Frequency of 3 is: 2
+			              Frequency of 5 is: 2
+			              Frequency of 8 is: 3
+			              Frequency of 9 is: 2
+			              Frequency of 10 is: 1
+			Input: arr[] = {2, 2, 6, 6, 7, 7, 7, 11} 
+			Output:        Frequency of 2 is: 2
+			               Frequency of 6 is: 2
+			               Frequency of 7 is: 3
+			               Frequency of 11 is: 1
 
 
+11. Stock Buy and Sell Problem
+
+			The cost of a stock on each day is given in an array. Find the maximum profit that you can make by buying and selling on those days. 
+			If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
+		
+			Examples:
+			
+			Input: arr[] = {100, 180, 260, 310, 40, 535, 695}
+			Output: 865
+			Explanation: Buy the stock on day 0 and sell it on day 3 => 310 – 100 = 210
+			                       Buy the stock on day 4 and sell it on day 6 => 695 – 40 = 655
+			                       Maximum Profit  = 210 + 655 = 865
+			Input: arr[] = {4, 2, 2, 2, 4}
+			Output: 2
+			Explanation: Buy the stock on day 1 and sell it on day 4 => 4 – 2 = 2
+			                       Maximum Profit  = 2
 
  
