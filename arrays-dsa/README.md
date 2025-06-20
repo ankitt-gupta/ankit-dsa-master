@@ -153,8 +153,20 @@ Start From here:
 			We can trap “3 units” of water between 3 and 2,
 			“1 unit” on top of bar 2 and “3 units” between 2 and 4.
 
-13.
+13. Max consecutive 1s
+
+			//Given a binary array, find the count of the maximum number of consecutive 1's present in the array.
+			int[] a14 = {1,1,1,0,0,1,1};
+			//Expected: 3   {3>2}
+			Examples : 
 			
+			Input: arr[] = {1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1}
+			Output: 4
+			
+			Input: arr[] = {0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1}
+			Output: 1
+
+14. 
 			 
  
  
