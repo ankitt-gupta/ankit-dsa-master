@@ -211,6 +211,21 @@ public class ArraysDsaMain {
 			}
 		}
 
+//11. Stock Buy and Sell Problem
+
+//		The cost of a stock on each day is given in an array. Find the maximum profit that you can make by buying and selling on those days. 
+//		If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
+		//Given: 
+		int[] a12 = {100, 180, 260, 310, 40, 535, 695};
+		
+		int maxProfit = 0;
+		for (int i = 1; i < a12.length; i++) {
+			if(a12[i] > a12[i - 1]) {
+				maxProfit = maxProfit + (a12[i] - a12[i - 1]);
+			}
+		}
+		
+		System.out.println("Stock Buy and Sell Max Profit : " + maxProfit);
 	}
 
 	/**
