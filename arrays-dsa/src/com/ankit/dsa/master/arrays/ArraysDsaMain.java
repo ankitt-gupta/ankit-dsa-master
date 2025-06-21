@@ -305,7 +305,7 @@ public class ArraysDsaMain {
 		// subarray of numbers that has the largest sum.
 		// Input:
 		int[] a15 = { -2, -3, 4, -1, -2, 1, 5, -3 };
-		// Output: [4, -1, -2, 1, 5]
+		// Output: [4, -1, -2, 1, 5] : maxSum = 7
 
 		int maxSubArraySum = a15[0];
 		for (int i = 0; i < a15.length; i++) {
@@ -313,12 +313,10 @@ public class ArraysDsaMain {
 			for (int k = i; k < a15.length; k++) {
 				curr = curr + a15[k];
 				maxSubArraySum = Math.max(curr, maxSubArraySum);
-				System.out.println("maxSubArraySum : " + maxSubArraySum);
 			}
-
 		}
+		System.out.println("maxSubArraySum : " + maxSubArraySum);
 
-		System.out.println(maxSubArraySum);
 	}
 
 	/**
