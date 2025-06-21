@@ -1,5 +1,7 @@
 package com.ankit.dsa.master.arrays;
 
+import java.util.Iterator;
+
 /**
  * The Class ArraysDsaMain.
  * 
@@ -280,24 +282,43 @@ public class ArraysDsaMain {
 
 //13. Max consecutive 1s
 
-		//Given a binary array, find the count of the maximum number of consecutive 1's present in the array.
-		int[] a14 = {1,1,1,0,0,1,1};
-		//Expected: 3   {3>2}
+		// Given a binary array, find the count of the maximum number of consecutive 1's
+		// present in the array.
+		int[] a14 = { 1, 1, 1, 0, 0, 1, 1 };
+		// Expected: 3 {3>2}
 		int cur = 0;
 		int ones = 0;
 		for (int i = 0; i < a14.length; i++) {
-			if(a14[i] == 0) {
+			if (a14[i] == 0) {
 				cur = 0;
 			} else {
 				cur++;
-			ones =	Math.max(ones,cur);
+				ones = Math.max(ones, cur);
 			}
 		}
 
 		System.out.println("Max 1s : " + ones);
-		
-		
-		
+
+//14. Maximum subarray sum
+
+		// Given an array arr[], the task is to find the elements of a contiguous
+		// subarray of numbers that has the largest sum.
+		// Input:
+		int[] a15 = { -2, -3, 4, -1, -2, 1, 5, -3 };
+		// Output: [4, -1, -2, 1, 5]
+
+		int maxSubArraySum = a15[0];
+		for (int i = 0; i < a15.length; i++) {
+			int curr = 0;
+			for (int k = i; k < a15.length; k++) {
+				curr = curr + a15[k];
+				maxSubArraySum = Math.max(curr, maxSubArraySum);
+				System.out.println("maxSubArraySum : " + maxSubArraySum);
+			}
+
+		}
+
+		System.out.println(maxSubArraySum);
 	}
 
 	/**
