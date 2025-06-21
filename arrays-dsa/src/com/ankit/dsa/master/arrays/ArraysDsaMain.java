@@ -307,6 +307,7 @@ public class ArraysDsaMain {
 		int[] a15 = { -2, -3, 4, -1, -2, 1, 5, -3 };
 		// Output: [4, -1, -2, 1, 5] : maxSum = 7
 
+		// Naive way
 		int maxSubArraySum = a15[0];
 		for (int i = 0; i < a15.length; i++) {
 			int curr = 0;
@@ -317,6 +318,15 @@ public class ArraysDsaMain {
 		}
 		System.out.println("maxSubArraySum : " + maxSubArraySum);
 
+		// Efficient way:
+		maxSubArraySum = a15[0];
+		int maxSubArrayEnding = a15[0];
+		for (int i = 0; i < a15.length; i++) {
+			maxSubArrayEnding = Math.max(maxSubArrayEnding + a15[i], a15[i]);
+			maxSubArraySum = Math.max(maxSubArrayEnding, maxSubArraySum);
+		}
+		System.out.println("maxSubArraySum : " + maxSubArraySum);
+		
 	}
 
 	/**
