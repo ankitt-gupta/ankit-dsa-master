@@ -327,6 +327,18 @@ public class ArraysDsaMain {
 		}
 		System.out.println("maxSubArraySum : " + maxSubArraySum);
 		
+//15.  Longest Even Odd Subarray 
+
+		//Given an array a[ ] of N integers, the task is to 
+		//find the length of the longest Alternating Even Odd subarray present in the array
+		//Given Input:
+		int[] a16 = {1, 2, 3, 4, 5, 7, 9}; 
+		//Expected Output: 5 
+		//Explanation: 
+		//The subarray {1, 2, 3, 4, 5} has alternating even and odd elements.
+		
+		
+		
 	}
 
 	/**
