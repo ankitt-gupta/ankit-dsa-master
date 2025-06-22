@@ -183,6 +183,29 @@ Start From here:
 			In the above input, the maximum contiguous subarray sum is 7 and the elements 
 			of the subarray are [6, -2, -3, 1, 5]
 
-15. 
+15.  Longest Even Odd Subarray 
+
+			Given an array a[ ] of N integers, the task is to find the length of the longest Alternating Even Odd subarray present in the array.
+			
+			Examples: 
+			
+			Input: a[] = {1, 2, 3, 4, 5, 7, 9} 
+			Output: 5 
+			Explanation: 
+			The subarray {1, 2, 3, 4, 5} has alternating even and odd elements.
+			
+			Input: a[] = {1, 3, 5} 
+			Output: 1
+			Explanation: 
+			There are only odd numbers, so we can count any one of them.
+
+16. 
+
+
+
+
+
+
+
  
  
