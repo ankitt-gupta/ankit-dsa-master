@@ -1,7 +1,5 @@
 package com.ankit.dsa.master.arrays;
 
-import java.util.Iterator;
-
 /**
  * The Class ArraysDsaMain.
  * 
@@ -337,7 +335,20 @@ public class ArraysDsaMain {
 		//Explanation: 
 		//The subarray {1, 2, 3, 4, 5} has alternating even and odd elements.
 		
+		int count16 = 1;
+		int maxCount = 1;
+		for (int i = 0; i < a16.length - 1; i++) {
+			if (a16[i] % 2 == 0 && a16[i + 1] % 2 != 0 ||
+					a16[i] % 2 != 0 && a16[i + 1] % 2 == 0) {
+				count16++;
+				maxCount = Math.max(count16, maxCount);
+			} else {
+				count16 = 1;
+			}
+			
+		}
 		
+		System.out.println("maxCount : " + maxCount);
 		
 	}
 
