@@ -349,47 +349,98 @@ public class ArraysDsaMain {
 		}
 
 		System.out.println("maxCount : " + maxCount);
-		
-//16. Maximum Circular Sum Subarray
-		//Given a circular array of size n, find the maximum subarray sum of the non-empty subarray.
 
-		//Input: 
-		int[] a17 = 
-			{1,-2,3,-2}; 
+//16. Maximum Circular Sum Subarray.
+
+		// Given a circular array of size n, find the maximum subarray sum of the
+		// non-empty subarray.
+
+		// Input:
+		int[] nums = { 5, -3, 5 };
+//			{1,-2,3,-2}; 
 //			{-1, 40, -14, 7, 6, 5, -4, -1};
 //			{10, -3, -4, 7, 6, 5, -4, -1};
 //			{8, -8, 9, -9, 10, -11, 12};
-		//Output: 22 
-		//Explanation: Subarray 12, 8, -8, 9, -9, 10 gives the maximum sum, that is 22.
-		
-		int maxSubArraySum17 = a17[0];
-		int maxSum17 = a17[0];
-		int minSubArraySum17 = a17[0];
-		int minSum17 = a17[0];
-		
-		for (int i = 0; i < a17.length; i++) {
-			maxSum17 = Math.max(a17[i], a17[i] + maxSum17);
-			maxSubArraySum17 =   Math.max(maxSum17, maxSubArraySum17);
-		}
-		
-		if (maxSubArraySum17 < 0) {
-			System.out.println("Max Arrays Circular Sum: " + maxSubArraySum17);
-		}
-		
-		int totalSum17 = 0;		
-		for (int i = 0; i < a17.length; i++) {
-			totalSum17 = totalSum17 + a17[i];
-			a17[i] =  - a17[i];
-		}
-		
-		for (int i = 0; i < a17.length; i++) {
-			minSum17 = Math.max(a17[i], a17[i] + minSum17);
-			minSubArraySum17 =   Math.max(minSum17, minSubArraySum17);
-		}
-		//
-		System.out.println( "Max Cir. Sum: " + Math.max(maxSubArraySum17, ( totalSum17 + minSubArraySum17)));
-		
+		// Output: 22
+		// Explanation: Subarray 12, 8, -8, 9, -9, 10 gives the maximum sum, that is 22.
 
+		// Renamed 'arr' to 'nums' as per LeetCode convention
+
+		int n = nums.length;
+
+		// Edge case: If the array has only one element
+		if (n == 1) {
+			System.out.println(nums[0]);
+		}
+
+		// Step 1: Find the maximum sum of a normal subarray (non-circular)
+		// Create a copy to preserve the original array for the 'max_normal'
+		// calculation,
+		// as the array will be modified for the circular sum calculation.
+		// It's crucial to copy because the 'nums' array will be modified later for the
+		// circular part.
+		int[] originalNums = new int[n];
+		System.arraycopy(nums, 0, originalNums, 0, n); // Copy nums to originalNums
+
+		int max_normal = normalMaxSum(originalNums); // Call the helper method
+
+		// If all elements are negative (or max_normal is negative),
+		// then the maximum sum will be the largest single element (least negative).
+		// In this case, the circular sum (sum of all elements if we "wrap") would be
+		// more negative
+		// if we tried to remove positive elements. So we return max_normal.
+		// This handles cases like [-1, -2, -3] where the answer is -1.
+		if (max_normal < 0) {
+			System.out.println(max_normal);
+		}
+
+		// Step 2: Calculate the sum of all elements in the array
+		// And prepare the array for finding the minimum subarray sum
+		int arr_sum = 0;
+		for (int i = 0; i < n; i++) {
+			arr_sum += nums[i]; // Use the current 'nums' array for total sum (before inversion)
+			// Invert the signs of elements in 'nums' for the "circular sum" calculation
+			// This transforms the max sum subarray problem into a min sum subarray problem
+			nums[i] = -nums[i];
+		}
+
+		// Step 3: Find the maximum sum of a subarray in the inverted array.
+		// This effectively gives the negative of the minimum subarray sum in the
+		// original array.
+		// max_circular = Total Sum - Minimum Subarray Sum (original array)
+		// = Total Sum + Maximum Subarray Sum (inverted array)
+		int max_circular = arr_sum + normalMaxSum(nums); // normalMaxSum uses the now-inverted 'nums'
+
+		// The overall maximum sum is the maximum of the normal maximum sum
+		// and the circular maximum sum.
+		System.out.println(Math.max(max_normal, max_circular));
+
+//17. 
+		
+		
+	}
+
+	/**
+	 * The Method normalMaxSum.
+	 * 
+	 * Helper method for standard Kadane's Algorithm (finding max subarray sum in a
+	 * linear array) This method should be static as it's an internal helper.
+	 * 
+	 * @param array
+	 * @return maximum sum
+	 */
+	private static int normalMaxSum(int[] arr) { // Moved outside the public method
+		int res = arr[0]; // Stores the overall maximum sum found so far
+		int maxEnding = arr[0]; // Stores the maximum sum ending at the current position
+
+		for (int i = 1; i < arr.length; i++) {
+			// maxEnding is either the current element itself,
+			// or the current element added to the max sum ending at the previous position
+			maxEnding = Math.max(arr[i], maxEnding + arr[i]);
+			// Update the overall maximum sum
+			res = Math.max(res, maxEnding);
+		}
+		return res;
 	}
 
 	/**
