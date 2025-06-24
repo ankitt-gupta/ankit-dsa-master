@@ -349,6 +349,41 @@ public class ArraysDsaMain {
 		}
 
 		System.out.println("maxCount : " + maxCount);
+		
+//16. Maximum Circular Sum Subarray
+		//Given a circular array of size n, find the maximum subarray sum of the non-empty subarray.
+
+		//Input: 
+		int[] a17 = {8, -8, 9, -9, 10, -11, 12};
+		//Output: 22 
+		//Explanation: Subarray 12, 8, -8, 9, -9, 10 gives the maximum sum, that is 22.
+		
+		int maxSubArraySum17 = a17[0];
+		int maxSum17 = a17[0];
+		int minSubArraySum17 = a17[0];
+		int minSum17 = a17[0];
+		
+		for (int i = 0; i < a17.length; i++) {
+			maxSum17 = Math.max(a17[i], a17[i] + maxSum17);
+			maxSubArraySum17 =   Math.max(maxSum17, maxSubArraySum17);
+		}
+		
+		if (maxSubArraySum17 < 0) {
+			System.out.println("Max Arrays Circular Sum: " + maxSubArraySum17);
+		}
+		
+		for (int i = 0; i < a17.length; i++) {
+			minSum17 = Math.min(a17[i], a17[i] + minSum17);
+			minSubArraySum17 =   Math.min(minSum17, minSubArraySum17);
+		}
+		
+		int totalSum17 = 0;
+		for (int i = 0; i < a17.length; i++) {
+			totalSum17 = totalSum17 + a17[i];
+		}
+		
+		System.out.println("Max: " + maxSubArraySum17 + "    " +  " Min: " + minSubArraySum17 + "    " + "Min Cir. Sum: " + (totalSum17 - minSubArraySum17));
+		
 
 	}
 
