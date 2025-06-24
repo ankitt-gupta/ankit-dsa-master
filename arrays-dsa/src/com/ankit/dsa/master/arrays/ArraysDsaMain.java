@@ -386,8 +386,7 @@ public class ArraysDsaMain {
 			minSum17 = Math.max(a17[i], a17[i] + minSum17);
 			minSubArraySum17 =   Math.max(minSum17, minSubArraySum17);
 		}
-		
-		
+		//
 		System.out.println( "Max Cir. Sum: " + Math.max(maxSubArraySum17, ( totalSum17 + minSubArraySum17)));
 		
 
