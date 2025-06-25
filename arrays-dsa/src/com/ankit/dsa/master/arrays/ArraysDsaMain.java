@@ -584,10 +584,10 @@ public class ArraysDsaMain {
 		// {1,2,3,4,5,6,7,8,9,10,11,12,13,14 15}, {4,5,6,7,8}, {3,4,5}, {1,2,3,4}.
 		// In all these ranges, 4 appears the most times.
 
-		int[] frequencyArray24 = new int[108]; // as range can max out to 106
+		int[] frequencyArray24 = new int[106]; // as range can max out to 106
 
 		// calculate frequency of starting of a range
-		for (int i = 0; i < frequencyArray24.length; i++) {
+		for (int i = 0; i < L24.length; i++) {
 			frequencyArray24[L24[i]]++;
 			frequencyArray24[R24[i] + 1]--;
 		}
