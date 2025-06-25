@@ -441,25 +441,49 @@ public class ArraysDsaMain {
 			}
 		}
 		System.out.println("majorityElementIndex: " + a18[majorityElementIndex]);
-		
-		//checks if majority element is greater than n/2
-		//this will run only if there is no majority element
+
+		// checks if majority element is greater than n/2
+		// this will run only if there is no majority element
 		int count18Check = 0;
 		for (int i = 0; i < a18.length; i++) {
 			if (a18[majorityElementIndex] == a18[i]) {
 				count18Check++;
-			} 
+			}
 		}
-		if (count18Check <= a18.length/2) {
+		if (count18Check <= a18.length / 2) {
 			majorityElementIndex = -1;
 			System.out.println("No majority element is present!: " + majorityElementIndex);
 		} else {
-			System.out.println("Majority element is present!:  " +  a18[majorityElementIndex] );
+			System.out.println("Majority element is present!:  " + a18[majorityElementIndex]);
+		}
+
+//18. Minimum Consecutive Flips
+
+		// Given a binary array, we need to convert this array into an array that either
+		// contains all 1s or all 0s. We need to do it using the minimum number of group
+		// flips.
+
+		// Input :
+		int[] a19 = { 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1 };
+		// Output :
+		// From 1 to 3
+		// From 5 to 6
+		// From 8 to 8
+
+		for (int i = 1; i < a19.length; i++) {
+			if (a19[i] != a19[i - 1]) {
+				if (a19[i] != a19[0]) {
+					System.out.print("From " + i);
+				} else {
+					System.out.println(" to " + (i - 1));
+				}
+			}
+		}
+		if (a19[a19.length-1] != a19[0]) {
+			System.out.print(" to  " + (a19.length-1));
 		}
 
 	}
-
-//18. 
 
 	/**
 	 * The Method normalMaxSum.
