@@ -524,20 +524,45 @@ public class ArraysDsaMain {
 				startElements21++;
 			}
 			if (sum21 == currentSum21) {
-				System.out.println("Subarray with given sum is present : " + currentSum21 + " "+ true);
+				System.out.println("Subarray with given sum is present : " + currentSum21 + " " + true);
 			}
 		}
-		
+
 //		if (sum21 != currentSum21) {
 //			System.out.println("Subarray with given sum is NOT present");
 //		}
 
 //21. Prefix Sum
 
-		//Input  : 
-		int[] a22 = {10, 20, 10, 5, 15};
-		//Output : prefixSum[] = {10, 30, 40, 45, 60}
+		// Input :
+		int[] a22 = { 10, 20, 10, 5, 15 };
+		// Output : prefixSum[] = {10, 30, 40, 45, 60} prefixSum = form 2 to 4 = 30
 
+		int[] prefixSum = new int[a22.length];
+		prefixSum[0] = a22[0];
+
+		for (int i = 1; i < prefixSum.length; i++) {
+			prefixSum[i] = a22[i] + prefixSum[i - 1];
+		}
+		int prefixSum22 = getSum(prefixSum, 2, 4);
+		System.out.println("	prefixSum   : " + prefixSum22);
+	}
+
+	/**
+	 * The Method GetSum.
+	 * 
+	 * This method will return prefix sum for a range provided.
+	 * 
+	 * @param array of prefixSum
+	 * @param l     lower range
+	 * @param r     upper range
+	 * @return prefixSum22 in O(1) time
+	 */
+	private static int getSum(int[] prefixSum, int l, int r) {
+		if (l == 0) {
+			return prefixSum[r];
+		}
+		return prefixSum[r] - prefixSum[l - 1];
 	}
 
 	/**
