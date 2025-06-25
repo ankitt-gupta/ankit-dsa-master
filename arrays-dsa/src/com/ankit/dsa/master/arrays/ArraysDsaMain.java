@@ -415,10 +415,51 @@ public class ArraysDsaMain {
 		// and the circular maximum sum.
 		System.out.println(Math.max(max_normal, max_circular));
 
-//17. 
+//17. Majority Element.
+		// Find the majority element in the array. A majority element in an array A[] of
+		// size n is an element that appears more than n/2 times (and hence there is at
+		// most one such element).
+		// What is a majority element?
+		// A majority element in an array A[] of size n is an element that appears more
+		// than n/2 times (and hence there is at most one such element).
+
+		// Input :
+		int[] a18 = { 3, 3, 4, 2, 4, 4, 2, 4, 4 };
+		// Output : 4
+
+		int count18 = 1;
+		int majorityElementIndex = 0;
+		for (int i = 1; i < a18.length; i++) {
+			if (a18[majorityElementIndex] == a18[i]) {
+				count18++;
+			} else {
+				count18--;
+			}
+			if (count18 == 0) {
+				majorityElementIndex = i;
+				count18 = 1;
+			}
+		}
+		System.out.println("majorityElementIndex: " + a18[majorityElementIndex]);
 		
-		
+		//checks if majority element is greater than n/2
+		//this will run only if there is no majority element
+		int count18Check = 0;
+		for (int i = 0; i < a18.length; i++) {
+			if (a18[majorityElementIndex] == a18[i]) {
+				count18Check++;
+			} 
+		}
+		if (count18Check <= a18.length/2) {
+			majorityElementIndex = -1;
+			System.out.println("No majority element is present!: " + majorityElementIndex);
+		} else {
+			System.out.println("Majority element is present!:  " +  a18[majorityElementIndex] );
+		}
+
 	}
+
+//18. 
 
 	/**
 	 * The Method normalMaxSum.
