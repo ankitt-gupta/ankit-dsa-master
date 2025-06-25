@@ -479,9 +479,30 @@ public class ArraysDsaMain {
 				}
 			}
 		}
-		if (a19[a19.length-1] != a19[0]) {
-			System.out.print(" to  " + (a19.length-1));
+		if (a19[a19.length - 1] != a19[0]) {
+			System.out.print(" to  " + (a19.length - 1));
 		}
+
+//19. Sliding Window Technique
+
+		// Given an array of integers of size 'n'. Our aim is to calculate the maximum
+		// sum of 'k' consecutive elements in the array.
+		// Input :
+		int[] a20 = { 100, 200, 300, 400 }; // 20 is question number or (question number+1) done to have different names
+											// with in same file
+		int k20 = 2; // k20 as k is constant name and 20 is question number or (question number+1)
+		// Output : 700
+
+		int currentSum20 = 0;
+		for (int i = 0; i < k20; i++) {
+			currentSum20 += a20[i];
+		}
+
+		for (int i = k20; i < a20.length; i++) {
+			currentSum20 = Math.max(currentSum20 + a20[i] - a20[i - k20], currentSum20);
+		}
+
+		System.out.println("Max Consecutive k elements sum, using sliding window : " + currentSum20);
 
 	}
 
