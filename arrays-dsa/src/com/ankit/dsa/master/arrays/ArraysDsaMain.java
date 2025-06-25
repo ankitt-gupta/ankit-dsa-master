@@ -1,5 +1,7 @@
 package com.ankit.dsa.master.arrays;
 
+import java.util.Iterator;
+
 /**
  * The Class ArraysDsaMain.
  * 
@@ -503,6 +505,33 @@ public class ArraysDsaMain {
 		}
 
 		System.out.println("Max Consecutive k elements sum, using sliding window : " + currentSum20);
+
+//20. Subarray with Given Sum
+
+		// Given an array arr[ ] of non-negative integers and an integer sum, find a
+		// subarray that adds to a given sum.
+		// Input:
+		int[] a21 = { 1, 4, 20, 3, 10, 5 };
+		int sum21 = 33;
+		// Output: Sum found between indexes 2 and 4 (return true or false)
+
+		int currentSum21 = 0;
+		int startElements21 = 0;
+		for (int i = 0; i < a21.length; i++) {
+			currentSum21 += a21[i];
+			while (sum21 < currentSum21) {
+				currentSum21 -= a21[startElements21];
+				startElements21++;
+			}
+			if (sum21 == currentSum21) {
+				System.out.println("Subarray with given sum is present : " + currentSum21 + " "+ true);
+			}
+		}
+		
+//		if (sum21 != currentSum21) {
+//			System.out.println("Subarray with given sum is NOT present");
+//		}
+		
 
 	}
 
