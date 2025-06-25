@@ -531,7 +531,12 @@ public class ArraysDsaMain {
 //		if (sum21 != currentSum21) {
 //			System.out.println("Subarray with given sum is NOT present");
 //		}
-		
+
+//21. Prefix Sum
+
+		//Input  : 
+		int[] a22 = {10, 20, 10, 5, 15};
+		//Output : prefixSum[] = {10, 30, 40, 45, 60}
 
 	}
 
