@@ -569,6 +569,10 @@ public class ArraysDsaMain {
 			lftSum += a23[i];
 		}
 
+//23. Maximum Appearing Element
+
+		
+
 	}
 
 	/**
