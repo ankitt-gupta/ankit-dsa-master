@@ -571,7 +571,35 @@ public class ArraysDsaMain {
 
 //23. Maximum Appearing Element
 
-		
+		// Given two arrays L[ ] and R[ ] of size N
+		// where L[i] and R[i] (0 ? L[i], R[i] < 106) denotes a range of numbers,
+		// the task is to find the maximum occurred
+		// integer in all the ranges. If more than one such integer exists, print the
+		// smallest one.
+		// Input:
+		int[] L24 = { 1, 4, 3, 1 }; // range 1 to 15, 4 to 8, 3 to 5, 1 to 4
+		int[] R24 = { 15, 8, 5, 4 };
+		// Output: 4
+		// Explanation: Overall ranges are:
+		// {1,2,3,4,5,6,7,8,9,10,11,12,13,14 15}, {4,5,6,7,8}, {3,4,5}, {1,2,3,4}.
+		// In all these ranges, 4 appears the most times.
+
+		int[] frequencyArray24 = new int[108]; // as range can max out to 106
+
+		// calculate frequency of starting of a range
+		for (int i = 0; i < frequencyArray24.length; i++) {
+			frequencyArray24[L24[i]]++;
+			frequencyArray24[R24[i] + 1]--;
+		}
+		int result24 = 0;
+		for (int i = 1; i < frequencyArray24.length; i++) {
+			frequencyArray24[i] = frequencyArray24[i - 1] + frequencyArray24[i];
+			if (frequencyArray24[i] > frequencyArray24[result24]) {
+				result24 = i;
+			}
+		}
+
+		System.out.println("Maximum Appearing Element  :  " + result24);
 
 	}
 
