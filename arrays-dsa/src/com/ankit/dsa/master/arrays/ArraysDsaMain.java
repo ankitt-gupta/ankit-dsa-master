@@ -1,7 +1,5 @@
 package com.ankit.dsa.master.arrays;
 
-import java.util.Iterator;
-
 /**
  * The Class ArraysDsaMain.
  * 
@@ -546,6 +544,31 @@ public class ArraysDsaMain {
 		}
 		int prefixSum22 = getSum(prefixSum, 2, 4);
 		System.out.println("	prefixSum   : " + prefixSum22);
+
+//22. Equilibrium Point
+
+		// Input:
+		int[] a23 = { -7, 1, 5, 2, -4, 3, 0 };
+		// Output: 3 //index of 2
+		// 3 is an equilibrium index, because:
+		// A[0] + A[1] + A[2] = A[4] + A[5] + A[6]
+
+		int rytSum = 0;
+		int lftSum = 0;
+
+		for (int i = 0; i < a23.length; i++) {
+			rytSum += a23[i];
+		}
+
+		for (int i = 0; i < a23.length; i++) {
+			rytSum -= a23[i];
+			if (rytSum == lftSum) {
+				System.out.println("Equilibrium Point : " + true + "  At equilibrium index: " + i);
+				break;
+			}
+			lftSum += a23[i];
+		}
+
 	}
 
 	/**
