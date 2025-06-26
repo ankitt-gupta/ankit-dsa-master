@@ -372,9 +372,20 @@ Start From here:
 			Explanation: Overall Ranges are: {1,2,3,4,5,6,7,8,9,10,11,12,13,14 15}, {5,6,7,8}, {9,10,11,12}, {13,14,15,16,17,18,19,20},{21,22,23,24}
 			In these ranges, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 all appear 2 times. The smallest number among all are 5.
 
+24. We are given an Array of n integers, We are given q queries having indices l and r . We have to find out sum between the given range of indices.
 
+			Input
+			 [4, 5, 3, 2, 5]
+			 3
+			 0 3
+			 2 4
+			 1 3
+			 Output
+			 14 (4+5+3+2)
+			 10 (3+2+5)
+			 10 (5+3+2)
 
-
+25. 
 
 
 
