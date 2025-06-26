@@ -601,6 +601,8 @@ public class ArraysDsaMain {
 
 		System.out.println("Maximum Appearing Element  :  " + result24);
 
+// -- Sample revision problems starts --
+
 //24. We are given an Array of n integers, We are given q queries having indices l and r .
 		// We have to find out sum between the given range of indices.
 		// Input
@@ -614,15 +616,9 @@ public class ArraysDsaMain {
 		// 10 (3+2+5)
 		// 10 (5+3+2)
 
-		int totalSum = 0;
-		int currtSum = 0;
 		int preFixSumArray25[] = new int[a25.length];
 		int l = 2;
 		int r = 4;
-		for (int i = 0; i < a25.length; i++) {
-			totalSum += a25[i];
-		}
-
 		preFixSumArray25[0] = a25[0];
 		for (int i = 1; i < a25.length; i++) {
 			preFixSumArray25[i] = preFixSumArray25[i - 1] + a25[i];
@@ -631,7 +627,7 @@ public class ArraysDsaMain {
 		if (l == 0)
 			System.out.println("Range: " + l + " to " + r + " Sum: " + (preFixSumArray25[r]));
 		else
-			System.out.println("Range: " + l + " to " + r + " Sum: " + (preFixSumArray25[r] - preFixSumArray25[l-1]));
+			System.out.println("Range: " + l + " to " + r + " Sum: " + (preFixSumArray25[r] - preFixSumArray25[l - 1]));
 
 	}
 
