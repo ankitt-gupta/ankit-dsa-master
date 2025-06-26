@@ -601,6 +601,8 @@ public class ArraysDsaMain {
 
 		System.out.println("Maximum Appearing Element  :  " + result24);
 
+// -- Sample revision problems starts --
+
 //24. We are given an Array of n integers, We are given q queries having indices l and r .
 		// We have to find out sum between the given range of indices.
 		// Input
