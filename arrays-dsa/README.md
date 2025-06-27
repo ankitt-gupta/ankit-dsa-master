@@ -457,8 +457,14 @@ Start From here:
 			1 ≤ arr.size() ≤ 105
 			1 ≤ arr[i] ≤ 104
 
-4. 
+4. Rotate Array
 
+			int[] a4 = { 1, 2, 3, 4, 5 };
+			int d = 2;
+			// Expected: {3, 4, 5, 1, 2}
+			// Explain: when rotated by 2 elements, it becomes 3 4 5 1 2.
+
+5. 
 
  
  
