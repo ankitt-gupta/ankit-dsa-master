@@ -1,6 +1,8 @@
 package com.ankit.dsa.master.arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * The Class Array problems.
@@ -114,7 +116,32 @@ public class ArrayProblems {
 			System.out.print(a4[i] + " ");
 		}
 
-//5. 
+		System.out.println("  ");
+//5. Print Pattern
+
+		int N = 0;
+		int a5 = N;
+		List<Integer> list = new ArrayList<>();
+		if (N == 0) {
+			list.add(N);
+			System.out.println("Empty : " + list);
+		}
+
+		if (N < 0) {
+			list.add(N);
+			System.out.println("< 0 : " + list);
+		}
+		list.add(N);
+		while (a5 > 0) {
+			a5 = a5 - 5;
+			list.add(a5);
+		}
+		while (a5 <= 0 || a5 < N) {
+			a5 = a5 + 5;
+			list.add(a5);
+		}
+
+		System.out.println("List : " + list);
 
 	}
 
