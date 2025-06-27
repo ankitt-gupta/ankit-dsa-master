@@ -1,6 +1,5 @@
 package com.ankit.dsa.master.arrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
