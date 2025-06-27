@@ -1,6 +1,5 @@
 package com.ankit.dsa.master.arrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -109,13 +108,25 @@ public class ArrayProblems {
 		reverse(a4, 0, d);
 		reverse(a4, d, a4.length);
 		reverse(a4, 0, a4.length);
-		
+
 		System.out.print("Expeted Rotate Array: ");
 		for (int i = 0; i < a4.length; i++) {
 			System.out.print(a4[i] + " ");
 		}
+
+//5. 
+
 	}
 
+	/**
+	 * The Method Reverse.
+	 * 
+	 * Reverse an Array.
+	 * 
+	 * @param a
+	 * @param from
+	 * @param to
+	 */
 	private static void reverse(int[] a, int from, int to) {
 		while (from < to - 1) {
 			int temp = a[from];
