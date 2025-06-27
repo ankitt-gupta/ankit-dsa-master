@@ -72,6 +72,22 @@ public class ArrayProblems {
 
 		System.out.println("Max and Second Max : " + Arrays.asList(max, secondMax));
 
+//3. Mean And Median of Array 
+
+		// Input: {1, 2, 19, 28, 5}
+		// Mean Expected: 11
+		// Median Expected: 5
+
+		int[] a3 = {1, 2, 19, 28, 5};
+		// Mean:
+		
+		int sum3 = 0;
+		for (int i = 0; i < a3.length; i++) {
+			sum3 += a3[i];
+		}
+		System.out.println("Mean or Average : " + sum3 / a3.length);
+		
+
 	}
 
 }
