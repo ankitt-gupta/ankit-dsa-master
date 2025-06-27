@@ -91,9 +91,9 @@ public class ArrayProblems {
 		Arrays.sort(a3);
 		int n = a3.length;
 		if (n % 2 == 0) {
-			System.out.println("Median :" + (a3[n / 2 - 1] + a3[n / 2]) / 2);
+			System.out.println("Median : " + (a3[n / 2 - 1] + a3[n / 2]) / 2);
 		} else {
-			System.out.println("Median :" + a3[n / 2]);
+			System.out.println("Median : " + a3[n / 2]);
 		}
 
 	}
