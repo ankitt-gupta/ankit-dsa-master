@@ -436,7 +436,28 @@ Start From here:
 			1 <= N <= 105
 			1 <= arr[i] <= 106
 
-3.
+3. Mean And Median of Array
+
+			Given an array of positive integer arr[]. Find the mean and median of the array. 
+			Note: Return the floor value of mean and median.
+			Mean: The average value of the given array.
+			Median: If the length is odd, the middle value is the median; if the length is even, the median is the average of the two middle elements.
+			
+			Examples:
+			
+			Input: arr[] = [1, 2, 19, 28, 5]
+			Output: 11 5
+			Explanation: mean is (1 + 2 + 19  + 28  + 5)/5 = 11.
+			median is 5 (middle element after sorting)
+			Input: arr[] = [2, 8, 3, 4]
+			Output: 4 3
+			Explanation: mean is floor ((2 + 8 + 3 + 4)/4) = 4.
+			median is floor ((3 + 4)/2) = 3
+			Constraints:
+			1 ≤ arr.size() ≤ 105
+			1 ≤ arr[i] ≤ 104
+
+4. 
 
 
  
