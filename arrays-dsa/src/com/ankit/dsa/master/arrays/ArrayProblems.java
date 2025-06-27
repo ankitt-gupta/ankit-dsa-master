@@ -79,8 +79,8 @@ public class ArrayProblems {
 		// Median Expected: 5
 
 		int[] a3 = {1, 2, 19, 28, 5};
-		// Mean:
 		
+		// Mean:
 		int sum3 = 0;
 		for (int i = 0; i < a3.length; i++) {
 			sum3 += a3[i];
