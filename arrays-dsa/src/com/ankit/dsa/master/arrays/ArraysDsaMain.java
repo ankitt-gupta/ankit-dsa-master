@@ -314,7 +314,7 @@ public class ArraysDsaMain {
 				maxSubArraySum = Math.max(curr, maxSubArraySum);
 			}
 		}
-		System.out.println("maxSubArraySum- : " + maxSubArraySum);
+		System.out.println("maxSubArraySum : " + maxSubArraySum);
 
 		// Efficient way:
 		maxSubArraySum = a15[0];
