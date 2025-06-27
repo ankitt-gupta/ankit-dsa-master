@@ -108,11 +108,14 @@ public class ArrayProblems {
 		reverse(a4, 0, d);
 		reverse(a4, d, a4.length);
 		reverse(a4, 0, a4.length);
-		
+
 		System.out.print("Expeted Rotate Array: ");
 		for (int i = 0; i < a4.length; i++) {
 			System.out.print(a4[i] + " ");
 		}
+
+//5. 
+
 	}
 
 	private static void reverse(int[] a, int from, int to) {
