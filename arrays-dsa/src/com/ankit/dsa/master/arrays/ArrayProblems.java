@@ -52,25 +52,25 @@ public class ArrayProblems {
 
 //2. Max and Second Max
 
-		// Input:
-		// Expected:
-		int a2[] = {};
+		// Input: {1,2,3,4,5}
+		// Expected: 5 4
+		int[] a2 = { 1, 2, 3, 4, 5 };
 		int sizeOfArray = a2.length;
 		int secondMax = -1;
 		int max = a2[0];
 		if (sizeOfArray == 1) {
-			System.out.println(" Max and Second Max : " + new ArrayList<>(Arrays.asList(a[0], -1)));
+			System.out.println("Max and Second Max : " + Arrays.asList(a2[0], -1));
 		}
 		for (int i = 1; i < sizeOfArray; i++) {
-			if (a[i] > max) {
+			if (a2[i] > max) {
 				secondMax = max;
-				max = a[i];
-			} else if (secondMax < a[i] && max != a[i]) {
-				secondMax = a[i];
+				max = a2[i];
+			} else if (secondMax < a2[i] && max != a2[i]) {
+				secondMax = a2[i];
 			}
 		}
 
-		System.out.println(" Max and Second Max : " + new ArrayList<>(Arrays.asList(max, secondMax)));
+		System.out.println("Max and Second Max : " + Arrays.asList(max, secondMax));
 
 	}
 
