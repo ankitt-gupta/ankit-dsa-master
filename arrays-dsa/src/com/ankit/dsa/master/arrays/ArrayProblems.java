@@ -118,6 +118,15 @@ public class ArrayProblems {
 
 	}
 
+	/**
+	 * The Method Reverse.
+	 * 
+	 * Reverse an Array.
+	 * 
+	 * @param a
+	 * @param from
+	 * @param to
+	 */
 	private static void reverse(int[] a, int from, int to) {
 		while (from < to - 1) {
 			int temp = a[from];
