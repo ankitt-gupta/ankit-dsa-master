@@ -78,15 +78,23 @@ public class ArrayProblems {
 		// Mean Expected: 11
 		// Median Expected: 5
 
-		int[] a3 = {1, 2, 19, 28, 5};
-		
+		int[] a3 = { 1, 2, 19, 28, 5 };
+
 		// Mean:
 		int sum3 = 0;
 		for (int i = 0; i < a3.length; i++) {
 			sum3 += a3[i];
 		}
 		System.out.println("Mean or Average : " + sum3 / a3.length);
-		
+
+		// Median:
+		Arrays.sort(a3);
+		int n = a3.length;
+		if (n % 2 == 0) {
+			System.out.println("Median :" + (a3[n / 2 - 1] + a3[n / 2]) / 2);
+		} else {
+			System.out.println("Median :" + a3[n / 2]);
+		}
 
 	}
 
