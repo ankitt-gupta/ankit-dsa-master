@@ -127,12 +127,12 @@ Start From here:
 			
 			Input: arr[] = {100, 180, 260, 310, 40, 535, 695}
 			Output: 865
-			Explanation: Buy the stock on day 0 and sell it on day 3 => 310 ñ 100 = 210
-			                       Buy the stock on day 4 and sell it on day 6 => 695 ñ 40 = 655
+			Explanation: Buy the stock on day 0 and sell it on day 3 => 310 ‚Äì 100 = 210
+			                       Buy the stock on day 4 and sell it on day 6 => 695 ‚Äì 40 = 655
 			                       Maximum Profit  = 210 + 655 = 865
 			Input: arr[] = {4, 2, 2, 2, 4}
 			Output: 2
-			Explanation: Buy the stock on day 1 and sell it on day 4 => 4 ñ 2 = 2
+			Explanation: Buy the stock on day 1 and sell it on day 4 => 4 ‚Äì 2 = 2
 			                       Maximum Profit  = 2
  
  
@@ -150,8 +150,8 @@ Start From here:
 			Input: arr[]   = {3, 0, 2, 0, 4}
 			Output: 7
 			Explanation: Structure is like below.
-			We can trap ì3 unitsî of water between 3 and 2,
-			ì1 unitî on top of bar 2 and ì3 unitsî between 2 and 4.
+			We can trap ‚Äú3 units‚Äù of water between 3 and 2,
+			‚Äú1 unit‚Äù on top of bar 2 and ‚Äú3 units‚Äù between 2 and 4.
 
 13. Max consecutive 1s
 
@@ -315,7 +315,7 @@ Start From here:
 
 21. Prefix Sum
 
-			Given an array arr[] of size n, its prefix sum array is another array prefixSum[ ] of the same size, such that the value of prefixSum[i] is arr[0] + arr[1] + arr[2] Ö arr[i]. 
+			Given an array arr[] of size n, its prefix sum array is another array prefixSum[ ] of the same size, such that the value of prefixSum[i] is arr[0] + arr[1] + arr[2] ‚Ä¶ arr[i]. 
 			
 			We need to create the prefix Array so that getsum() queries can be resolved in O(1) time.
 			
@@ -385,8 +385,29 @@ Start From here:
 			 10 (3+2+5)
 			 10 (5+3+2)
 
-25. 
+# Array Practice problems
 
+1. Maximum Index
+
+			Difficulty: MediumAccuracy: 24.5%Submissions: 276K+Points: 4
+			Given an array arr of positive integers. The task is to return the maximum of j - i subjected to the constraint of arr[i] < arr[j] and i < j.
+			
+			Examples:
+			
+			Input: arr[] = [1, 10]
+			Output: 1
+			Explanation: arr[0] < arr[1] so (j-i) is 1-0 = 1.
+			Input: arr[] = [34, 8, 10, 3, 2, 80, 30, 33, 1]
+			Output: 6
+			Explanation: In the given array arr[1] < arr[7] satisfying the required condition(arr[i] < arr[j]) thus giving the maximum difference of j - i which is 6(7-1).
+			Expected Time Complexity: O(n)
+			Expected Auxiliary Space: O(n)
+			
+			Constraints:
+			1 ‚â§ arr.size ‚â§ 106
+			0 ‚â§ arr[i] ‚â§ 109
+
+2. 
 
 
  
