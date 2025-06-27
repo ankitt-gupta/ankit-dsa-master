@@ -96,6 +96,34 @@ public class ArrayProblems {
 			System.out.println("Median : " + a3[n / 2]);
 		}
 
+//4. Rotate Array
+
+		int[] a4 = { 1, 2, 3, 4, 5 };
+		int d = 2;
+		// Expected: {3, 4, 5, 1, 2}
+		// Explain: when rotated by 2 elements, it becomes 3 4 5 1 2.
+
+		if (d > a4.length) {
+			d = d % a4.length;
+		}
+		reverse(a4, 0, d);
+		reverse(a4, d, a4.length);
+		reverse(a4, 0, a4.length);
+		
+		System.out.print("Expeted Rotate Array: ");
+		for (int i = 0; i < a4.length; i++) {
+			System.out.print(a4[i] + " ");
+		}
+	}
+
+	private static void reverse(int[] a, int from, int to) {
+		while (from < to - 1) {
+			int temp = a[from];
+			a[from] = a[to - 1];
+			a[to - 1] = temp;
+			from++;
+			to--;
+		}
 	}
 
 }
