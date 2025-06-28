@@ -174,7 +174,7 @@ public class ArrayProblems {
 			System.out.println("Not D or A: " + false);
 		}
 
-//7. 1 10 10 2 4 10 3 7 10 1 Given
+//7. 1 10 10 2 4 10 3 7 10 1 Given    0 + 2 
 //	 10 1 2 10 10 4 7 3 1 10 Expected
 //		2  Given
 
