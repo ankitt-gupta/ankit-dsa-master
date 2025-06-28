@@ -143,6 +143,37 @@ public class ArrayProblems {
 
 		System.out.println("List : " + list);
 
+//6. Check if array is sorted and rotated
+
+		int[] a6 = { 2, 1, 4, 3 }; // true
+//			{ 4, 3, 2, 1 };         // False
+//				{ 4, 1, 2, 3 };     // true
+//			{ 3, 4, 1, 2 };         // true
+		int s = a6.length;
+		if (s <= 1) {
+			System.out.println("Not A or D: " + false);
+		}
+		int countA = 0;
+		int countD = 0;
+
+		for (int i = 0; i < a6.length - 1; i++) {
+			if (a6[i] > a6[i + 1]) {
+				countA++;
+			} else {
+				countD++;
+			}
+		}
+
+		System.out.println("CountA: " + countA + " CountD : " + countD);
+
+		if (a[a6.length - 1] <= a6[0] && countA == 1) {
+			System.out.println("Is A: " + true);
+		} else if (a6[s - 1] >= a6[0] && countD == 1) {
+			System.out.println("IS D: " + true);
+		} else {
+			System.out.println("Not D or A: " + false);
+		}
+
 	}
 
 	/**
