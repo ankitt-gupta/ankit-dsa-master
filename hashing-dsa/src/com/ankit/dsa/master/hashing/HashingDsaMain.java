@@ -49,7 +49,19 @@ public class HashingDsaMain {
 		}
 		System.out.println("Frequencies of array elements.: " + h2);
 
-// 3. 
+// 3. Intersection of two unsorted arrays
+
+		// In this particular problem, we are presented with an array of unique
+		// integers, and our objective is to find the intersection of the arrays and
+		// print the elements according to the order of occurrence in the first array.
+		// To accomplish this, we will explore two distinct approaches: a Naive approach
+		// utilizing nested loops, and an Efficient solution employing Hashing .
+
+		// Given:
+		int[] a3 = { 10, 15, 20, 25, 30, 50 };
+		int[] aa3 = { 30, 5, 15, 80 };
+		// Expected: 15,30
+
 	}
 
 }
