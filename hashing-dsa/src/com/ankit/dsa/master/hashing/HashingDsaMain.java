@@ -42,6 +42,14 @@ public class HashingDsaMain {
 		// 15: 1
 		// 20: 1
 
+		HashMap<Integer, Integer> h2 = new HashMap<Integer, Integer>();
+
+		for (int i : a2) {
+			h2.put(i, h2.getOrDefault(i, 0) + 1); // set the value as 0 of if present then add 1
+		}
+		System.out.println("Frequencies of array elements.: " + h2);
+
+// 3. 
 	}
 
 }
