@@ -35,8 +35,13 @@ public class HashingDsaMain {
 		// an Efficient solution employing Hashing (Maps).
 
 		// Given:
-
+		int[] a2 = { 10, 12, 10, 15, 10, 20, 12, 12 };
 		// Expected:
+		// 10: 3
+		// 12: 3
+		// 15: 1
+		// 20: 1
+
 	}
 
 }
